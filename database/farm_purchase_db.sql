@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 04, 2022 at 04:39 AM
+-- Generation Time: Apr 04, 2022 at 05:19 AM
 -- Server version: 5.7.15-log
 -- PHP Version: 5.6.26
 
@@ -89,7 +89,7 @@ CREATE TABLE `tb_purchase_request` (
   `purchase_request_net_price` varchar(50) NOT NULL,
   `purchase_request_vat` varchar(50) NOT NULL,
   `purchase_request_vat_price` varchar(50) NOT NULL,
-  `purchase_request_discount_price` varchar(45) NOT NULL
+  `purchase_request_discount_price` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -101,7 +101,13 @@ INSERT INTO `tb_purchase_request` (`pr_code`, `purchase_request_date`, `purchase
 (2, '0000-00-00', '', '', 0, '4.00', '', '', '', '', '', ''),
 (5, '0000-00-00', '', 'PRS01-NEW', 0, '100.00', '', '', '', '', '', ''),
 (16, '0000-00-00', 'Waiting', 'PRS01-NEW', 0, '50.00', '', '', '46.73', '7', '3.27', '50'),
-(17, '0000-00-00', 'Waiting', 'PRS01-NEW', 0, '450.00', '', '', '420.56', '7', '29.44', '50');
+(17, '0000-00-00', 'Waiting', 'PRS01-NEW', 0, '450.00', '', '', '420.56', '7', '29.44', '50'),
+(18, '0000-00-00', 'Waiting', 'PRS01-NEW', 0, '100.00', '', '', '93.46', '7', '6.54', ''),
+(19, '0000-00-00', 'Waiting', 'PRS01-NEW', 0, '90.00', '', '', '84.11', '7', '5.89', '10'),
+(20, '0000-00-00', 'Waiting', 'PRS01-NEW', 0, '100.00', '', '', '93.46', '7', '6.54', NULL),
+(21, '0000-00-00', 'Waiting', 'PRS01-NEW', 0, '40,000.00', '', '', '37,383.18', '7', '2,616.82', '1000'),
+(22, '0000-00-00', 'Waiting', 'PRS01-NEW', 0, '20,000.00', '', '', '18,691.59', '7', '1,308.41', NULL),
+(23, '0000-00-00', 'Waiting', 'PRS01-NEW', 0, '190.00', '', '', '177.57', '7', '12.43', '10');
 
 -- --------------------------------------------------------
 
@@ -194,7 +200,7 @@ ALTER TABLE `tb_purchase_request_status`
 -- AUTO_INCREMENT for table `tb_purchase_request`
 --
 ALTER TABLE `tb_purchase_request`
-  MODIFY `pr_code` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `pr_code` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
