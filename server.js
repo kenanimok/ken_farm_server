@@ -29,9 +29,13 @@ app.listen(port, () => {
 const appRouteFile = require('./routes/appRouteFile');
 appRouteFile(app);
 
-
-const appRoutesPurchaseRequest = require("./routes/appRoutesPurchaseRequest");
-appRoutesPurchaseRequest(app);
-
 const appRoutesProduct= require("./routes/appRoutesProduct");
 appRoutesProduct(app);
+
+const appRouteCustomer = require('./routes/appRouteCustomer');
+appRouteCustomer(app);
+
+const appRoutePR =  require('./routes/appRoutePR');
+appRoutePR(app);
+
+
